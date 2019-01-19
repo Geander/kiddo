@@ -1,0 +1,7 @@
+/**/node_modules
+/**/.vscode
+/**/*.VC.db
+/**/package-lock.json
+/**/.env*
+/**/keyfile*
+/**/.zip
