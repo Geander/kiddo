@@ -5,34 +5,47 @@ rodando em Docker e se comunicando por uma rede interna Docker.
 
 Centralizei o start e config de todos os services em um único comando.
 ```
-
 #### Desenho da arquitetuira construida
 ![arquitetura](arquitetura-atual.png)
-
 #### Server1 database
 ```sh
-mongo
+banco de dados para guardar as mensagens recebidas.
+- mongodb
+- ip interno: 172.28.2.1
 ```
 #### Server2 amqp
 ```sh
-rabbitmq
+fila para receber as mensagens.
+- rabbitmq
+- ip interno: 172.28.2.2
 ```
 #### Server3 consumer
 ```sh
-NodeJs
+job para ler mensagens do rabbitmq e guardar no mongo.
+- nodeJs
+- ip interno: 172.28.2.3
 ```
 #### Server4 service
 ```sh
-NodeJs
+api rest para exibir os registros do mongodb.
+- nodeJs
+- ip interno: 172.28.2.4
+- ip externo: http://127.0.0.1:8080/
 ```
-
-#### requisitos
+#### Pré requisitos
 ```sh
 docker
 docker-compose
 ```
-
-#### run
+#### Run
 ```sh
 docker-compose up &
+```
+### Proposta infra aws
+Também estou enviando uma proposta de infra aws
+![arquitetura](arquitetura-aws.png)
+### não deu tempo pra fazer
+```sh
+- Adicionar 'healthcheck' do docker pra esperar um serviço subir antes de subir o outro.
+- Criar o AWS CloudFormation.
 ```
