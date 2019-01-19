@@ -3,7 +3,8 @@
 Esse projeto é uma simples demonstração para a criação de 4 microserviços
 rodando em Docker e se comunicando por uma rede interna Docker.
 
-Centralizei o start e config de todos os services em um único comando.
+Para o teste ficar mais fácil coloquei tudo em 1 repositório e
+centralizei o start e config de todos os services em um único comando.
 ```
 #### Desenho da arquitetuira construida
 ![arquitetura](arquitetura-atual.png)
@@ -44,7 +45,7 @@ docker-compose up &
 ### Proposta infra aws
 Também estou enviando uma proposta de infra aws
 ![arquitetura](arquitetura-aws.png)
-### não deu tempo pra fazer
+### Não deu tempo pra fazer
 ```sh
 - Adicionar 'healthcheck' do docker pra esperar um serviço subir antes de subir o outro.
 - Criar o AWS CloudFormation.
