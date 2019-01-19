@@ -7,21 +7,32 @@ Centralizei o start e config de todos os services em um único comando.
 ```
 
 #### Desenho da arquitetuira construida
-
 ![arquitetura](arquitetura-atual.png)
 
 #### Server1 database
-- mongo
+```sh
+mongo
+```
 #### Server2 amqp
-- rabbitmq
+```sh
+rabbitmq
+```
 #### Server3 consumer
-- NodeJs
+```sh
+NodeJs
+```
 #### Server4 service
-- NodeJs
+```sh
+NodeJs
+```
 
 #### requisitos
+```sh
 docker
 docker-compose
+```
 
 #### run
+```sh
 docker-compose up &
+```
