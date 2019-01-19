@@ -25,6 +25,8 @@ fila para receber as mensagens.
 job para ler mensagens do rabbitmq e guardar no mongo.
 - nodeJs
 - ip interno: 172.28.2.3
+- testes unitátios
+- vide readme do service
 ```
 #### Server4 service
 ```sh
@@ -32,6 +34,9 @@ api rest para exibir os registros do mongodb.
 - nodeJs
 - ip interno: 172.28.2.4
 - ip externo: http://127.0.0.1:8080/
+- helmet com filtro xss
+- testes unitátios
+- vide readme do service
 ```
 #### Pré requisitos
 ```sh
