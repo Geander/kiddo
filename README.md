@@ -11,18 +11,21 @@ centralizei o start e config de todos os services em um único comando.
 #### Server1 database
 ```sh
 banco de dados para guardar as mensagens recebidas.
+- docker
 - mongodb
 - ip interno: 172.28.2.1
 ```
 #### Server2 amqp
 ```sh
 fila para receber as mensagens.
+- docker
 - rabbitmq
 - ip interno: 172.28.2.2
 ```
 #### Server3 consumer
 ```sh
 job para ler mensagens do rabbitmq e guardar no mongo.
+- docker
 - nodeJs
 - ip interno: 172.28.2.3
 - testes unitátios
@@ -31,6 +34,7 @@ job para ler mensagens do rabbitmq e guardar no mongo.
 #### Server4 service
 ```sh
 api rest para exibir os registros do mongodb.
+- docker
 - nodeJs
 - ip interno: 172.28.2.4
 - ip externo: http://127.0.0.1:8080/
