@@ -1,0 +1,7 @@
+**/*.js.map
+__tests__
+build/__tests__
+node_modules
+coverage
+.nyc_output
+.vscode
