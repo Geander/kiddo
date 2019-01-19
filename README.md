@@ -29,7 +29,7 @@ job para ler mensagens do rabbitmq e guardar no mongo.
 - nodeJs
 - ip interno: 172.28.2.3
 - testes unitátios
-- vide readme do service
+- vide readme do consumer
 ```
 #### Server4 service
 ```sh
@@ -58,4 +58,5 @@ Também estou enviando uma proposta de infra aws
 ```sh
 - Adicionar 'healthcheck' do docker pra esperar um serviço subir antes de subir o outro.
 - Criar o AWS CloudFormation.
+- Colocar TypeScript
 ```
