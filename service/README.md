@@ -31,7 +31,7 @@ npm start
 ```sh
 http://localhost:8080/
 ```
-### Build and run docker image
+##### Build and run docker image
 ```sh
 docker build -t "service:0.0.1" .
 docker run service:0.0.1
