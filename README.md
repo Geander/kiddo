@@ -60,7 +60,9 @@ curl -u guest:guest -H "content-type:application/json" -X POST -d'{"properties":
 http://127.0.0.1:8080/
 ```
 ### Proposta infra aws
+```sh
 Também estou enviando uma proposta de infra aws
+```
 ![arquitetura](arquitetura-aws.png)
 ### Não deu tempo pra fazer
 ```sh
