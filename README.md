@@ -51,6 +51,14 @@ docker-compose
 ```sh
 docker-compose up &
 ```
+### curl para enviar mensagens para fila
+```sh
+curl -u guest:guest -H "content-type:application/json" -X POST -d'{"properties":{"delivery_mode":2},"routing_key":"languages","payload":"{\"name\": \"ABAP\", \"wikipedia_url\": \"https://en.wikipedia.org/wiki/ABAP/\"}","payload_encoding":"string"}' http://localhost:15672/api/exchanges/%2f/amq.default/publish
+```
+### Acessar a api
+```sh
+http://127.0.0.1:8080/
+```
 ### Proposta infra aws
 Também estou enviando uma proposta de infra aws
 ![arquitetura](arquitetura-aws.png)
