@@ -66,6 +66,6 @@ Também estou enviando uma proposta de infra aws
 ```sh
 - Adicionar 'healthcheck' do docker pra esperar um serviço subir antes de subir o outro.
 - Criar o AWS CloudFormation.
-- Colocar TypeScript
+- Colocar TypeScript e classes.
 - Testar em outros ambientes, só testei no Ubuntu
 ```
