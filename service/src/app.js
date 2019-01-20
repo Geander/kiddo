@@ -1,7 +1,7 @@
 const config = require('../config');
 const restify = require('restify');
-const mongoose = require('mongoose');
 const helmet = require('helmet');
+const db = require('./database');
 
 const server = restify.createServer({
   name: config.name,
@@ -12,14 +12,6 @@ server.use(helmet.xssFilter());
 
 server.listen(config.port, () => {
 
-  mongoose.Promise = global.Promise;
-  mongoose.connect(
-    `mongodb://${config.db.uri}:${config.db.port}/${config.db.base}`,
-    { useNewUrlParser: true }
-  );
-
-  const db = mongoose.connection;
-
   db.on('error', err => {
     console.error(err);
     process.exit(1);
@@ -29,4 +21,5 @@ server.listen(config.port, () => {
     require('./routes')(server);
     console.log(`Server is listening on port ${config.port}`);
   });
+
 });

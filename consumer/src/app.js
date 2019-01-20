@@ -1,15 +1,7 @@
 const config = require('../config');
-const mongoose = require('mongoose');
 const amqp = require('amqplib/callback_api');
 const Languages = require('./models/languages');
-
-mongoose.Promise = global.Promise;
-mongoose.connect(
-  `mongodb://${config.db.uri}:${config.db.port}/${config.db.base}`,
-  { useNewUrlParser: true }
-);
-
-const db = mongoose.connection;
+const db = require('./database');
 
 db.on('error', err => {
   console.error(err);
