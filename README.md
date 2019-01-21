@@ -15,6 +15,8 @@ Além dos 4 servers solicitados estou também enviando um app que lê o csv e
 coloca as mensagens na fila.
 
 Cada server também contém seu próprio readme com instruções de testes.
+
+No csv está faltando uma url, esse registro não passa na validação.
 ```
 #### Desenho da arquitetuira construida
 ![arquitetura](arquitetura-atual.png)
