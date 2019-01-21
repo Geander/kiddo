@@ -64,10 +64,15 @@ http://127.0.0.1:8080/
 Também estou enviando uma proposta de infra aws
 ```
 ![arquitetura](arquitetura-aws.png)
-### Não deu tempo pra fazer
+### Futuras melhorias (Não deu tempo pra fazer)
 ```sh
-- Adicionar 'healthcheck' do docker pra esperar um serviço subir antes de subir o outro.
+- Adicionar 'healthcheck' do docker pra esperar um serviço
+  subir antes de subir o outro.
 - Criar o AWS CloudFormation.
 - Colocar TypeScript e classes.
-- Testar em outros ambientes, só testei no Ubuntu
+- Testar em outros ambientes, só testei no Ubuntu.
+- Usar mensagens em trânsito.
+- Usar várias filas e vários consumidores.
+- Dividir filas em diferentes núcleos.
+- Desativar acks manuais.
 ```
