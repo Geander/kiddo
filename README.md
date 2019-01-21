@@ -5,6 +5,8 @@ rodando em Docker e se comunicando por uma rede interna Docker.
 
 Para o teste ficar mais fácil coloquei tudo em 1 repositório e
 centralizei o start e config de todos os services em um único comando.
+
+Preparado para receber mensagens JSON com os parametros 'name' e 'wikipedia_url'.
 ```
 #### Desenho da arquitetuira construida
 ![arquitetura](arquitetura-atual.png)
