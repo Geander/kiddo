@@ -25,15 +25,19 @@ amqp.then(conn => conn.createChannel()).then(ch => {
 
 const save = msg => {
   console.log('Received %s', msg.content.toString());
-  const msgParsed = JSON.parse(msg.content);
-  let languages = new Languages({
-    'name': msgParsed.name,
-    'wikipedia_url': msgParsed.wikipedia_url
-  });
-  languages.save(err => {
-    if (err) {
-      console.error(err);
-      process.exit(1);
-    }
-  });
+  try {
+    const msgParsed = JSON.parse(msg.content);
+    let languages = new Languages({
+      'name': msgParsed.name,
+      'wikipedia_url': msgParsed.wikipedia_url
+    });
+    languages.save(err => {
+      if (err) {
+        console.error(err);
+        process.exit(1);
+      }
+    });
+  } catch (_err) {
+    console.log('Invalid JSON');
+  }
 };
