@@ -33,6 +33,7 @@ fila para receber as mensagens.
 - docker
 - rabbitmq
 - ip interno: 172.28.2.2
+- user 'guest'
 ```
 #### Server3 consumer
 ```sh
