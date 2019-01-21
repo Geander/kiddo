@@ -11,7 +11,7 @@ nodeJS
 ```sh
 npm i
 ```
-##### Run lint or fix lint
+##### Run lint
 ```sh
 npm run lint
 ```
