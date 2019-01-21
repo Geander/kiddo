@@ -49,8 +49,6 @@ services:
           memory: 1024M
       restart_policy:
         condition: on-failure
-    ports:
-      - '8081:8081'
     environment:
       - NODE_ENV=production
       - MONGODB_URI=172.28.2.1
