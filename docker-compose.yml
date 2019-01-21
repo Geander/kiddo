@@ -29,11 +29,6 @@ services:
           memory: 1024M
       restart_policy:
         condition: on-failure
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://172.28.2.2:15672"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
     ports:
       - '15672:15672'
       - '5672:5672'
