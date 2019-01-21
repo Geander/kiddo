@@ -4,7 +4,8 @@ Esse projeto é uma simples demonstração para a criação de 4 microserviços
 rodando em Docker e se comunicando por uma rede interna Docker.
 
 Para o teste ficar mais fácil coloquei tudo em 1 repositório e
-centralizei o start e config de todos os services em um único comando.
+centralizei o start e config de todos os services em um único comando
+(vide o tópico 'run' abaixo).
 
 Preparado para receber mensagens JSON com os parametros 'name' e 'wikipedia_url'.
 
