@@ -9,6 +9,11 @@ centralizei o start e config de todos os services em um único comando.
 Preparado para receber mensagens JSON com os parametros 'name' e 'wikipedia_url'.
 
 Os serviços sobem automaticamente se houver alguma falha.
+
+Além dos 4 servers solicitados estou também enviando um app que lê o csv o
+coloca as mensagens na fila.
+
+Cada server também contém seu próprio readme.
 ```
 #### Desenho da arquitetuira construida
 ![arquitetura](arquitetura-atual.png)
