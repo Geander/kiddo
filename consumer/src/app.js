@@ -27,16 +27,20 @@ const save = msg => {
   console.log('Received %s', msg.content.toString());
   try {
     const msgParsed = JSON.parse(msg.content);
-    let languages = new Languages({
-      'name': msgParsed.name,
-      'wikipedia_url': msgParsed.wikipedia_url
-    });
-    languages.save(err => {
-      if (err) {
-        console.error(err);
-        process.exit(1);
-      }
-    });
+    if (msgParsed.name && msgParsed.wikipedia_url) {
+      let languages = new Languages({
+        'name': msgParsed.name,
+        'wikipedia_url': msgParsed.wikipedia_url
+      });
+      languages.save(err => {
+        if (err) {
+          console.error(err);
+          process.exit(1);
+        }
+      });
+    } else {
+      console.log('Invalid JSON: ');
+    }
   } catch (_err) {
     console.log('Invalid JSON');
   }
